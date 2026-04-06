@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Handelsbanken Banner Preview</title>
+	<style>
+		:root {
+			--page-bg: #dfe7ee;
+			--panel-bg: #f7f4ea;
+			--text: #12324a;
+			--muted: #587184;
+			--frame: #16374b;
+			--shadow: 0 28px 60px rgba(18, 50, 74, 0.18);
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		html, body {
+			margin: 0;
+			min-height: 100%;
+			font-family: Georgia, "Times New Roman", serif;
+			color: var(--text);
+			background:
+				radial-gradient(circle at top left, rgba(255, 255, 255, 0.65), transparent 28%),
+				linear-gradient(180deg, #eef3f6 0%, var(--page-bg) 100%);
+		}
+
+		body {
+			display: grid;
+			place-items: center;
+			padding: 32px 20px 48px;
+		}
+
+		.layout {
+			width: min(100%, 1200px);
+			display: grid;
+			gap: 28px;
+		}
+
+		.intro {
+			background: rgba(247, 244, 234, 0.82);
+			backdrop-filter: blur(10px);
+			border: 1px solid rgba(18, 50, 74, 0.08);
+			border-radius: 24px;
+			padding: 24px;
+			box-shadow: 0 16px 40px rgba(18, 50, 74, 0.08);
+		}
+
+		.eyebrow {
+			margin: 0 0 8px;
+			font: 700 0.78rem/1.2 Arial, sans-serif;
+			letter-spacing: 0.18em;
+			text-transform: uppercase;
+			color: var(--muted);
+		}
+
+		h1 {
+			margin: 0;
+			font-size: clamp(2rem, 4vw, 3.5rem);
+			line-height: 0.95;
+			letter-spacing: -0.04em;
+		}
+
+		.intro p {
+			max-width: 58ch;
+			margin: 14px 0 0;
+			font-size: 1rem;
+			line-height: 1.6;
+			color: var(--muted);
+		}
+
+		.meta {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			margin-top: 18px;
+			font: 600 0.9rem/1.2 Arial, sans-serif;
+			color: var(--text);
+		}
+
+		.meta span,
+		.meta a {
+			text-decoration: none;
+			color: inherit;
+			background: rgba(18, 50, 74, 0.06);
+			border-radius: 999px;
+			padding: 10px 14px;
+		}
+
+		.stage {
+			display: grid;
+			place-items: center;
+			padding: 10px 0 0;
+		}
+
+		.device {
+			width: min(100%, 460px);
+			background: linear-gradient(180deg, #27485a 0%, #102837 100%);
+			border-radius: 38px;
+			padding: 18px;
+			box-shadow: var(--shadow);
+		}
+
+		.device-top {
+			display: flex;
+			justify-content: center;
+			padding-bottom: 12px;
+		}
+
+		.speaker {
+			width: 34%;
+			max-width: 140px;
+			height: 10px;
+			border-radius: 999px;
+			background: rgba(247, 244, 234, 0.18);
+		}
+
+		.screen {
+			background: #0b1f2c;
+			border-radius: 26px;
+			overflow: hidden;
+			aspect-ratio: 1080 / 1920;
+		}
+
+		iframe {
+			width: 100%;
+			height: 100%;
+			border: 0;
+			display: block;
+			background: #005fa5;
+		}
+
+		.caption {
+			margin-top: 14px;
+			text-align: center;
+			font: 600 0.88rem/1.4 Arial, sans-serif;
+			color: rgba(247, 244, 234, 0.78);
+		}
+
+		@media (max-width: 700px) {
+			body {
+				padding-inline: 14px;
+			}
+
+			.intro {
+				padding: 20px;
+			}
+
+			.device {
+				border-radius: 30px;
+				padding: 14px;
+			}
+
+			.screen {
+				border-radius: 20px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main class="layout">
+		<section class="intro">
+			<p class="eyebrow">GitHub Pages Preview</p>
+			<h1>Handelsbanken Hemnet Banner</h1>
+			<p>
+				This page previews the delivered 1080 × 1920 HTML5 banner inside a scaled mobile frame.
+				The embedded asset below is the actual banner file used for delivery.
+			</p>
+			<div class="meta">
+				<span>Format: 1080 × 1920</span>
+				<span>Type: Static HTML5</span>
+				<a href="Dnab-april/banner/index.html" target="_blank" rel="noopener noreferrer">Open banner only</a>
+			</div>
+		</section>
+
+		<section class="stage" aria-label="Banner preview">
+			<div class="device">
+				<div class="device-top">
+					<div class="speaker" aria-hidden="true"></div>
+				</div>
+				<div class="screen">
+					<iframe
+						src="Dnab-april/banner/index.html"
+						title="Handelsbanken Hemnet banner preview"
+						loading="lazy">
+					</iframe>
+				</div>
+				<div class="caption">Embedded from Dnab-april/banner/index.html</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
