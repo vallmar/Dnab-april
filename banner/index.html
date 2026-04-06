@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080" />
+  <title>Handelsbanken – Hitta hem med personligt bolån</title>
+  <style>
+    /* ── Reset ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Fonts ─────────────────────────────────────────── */
+    /*
+     * Handelsbanken Sans is a proprietary typeface.
+     * If the font files are available, update the src paths below.
+     * The banner falls back to a neutral geometric sans-serif.
+     */
+    @font-face {
+      font-family: "Handelsbanken Sans";
+      font-weight: 700;
+      font-style: normal;
+      src: local("Handelsbanken Sans Bold"),
+           local("HandelsbankenSans-Bold");
+    }
+    @font-face {
+      font-family: "Handelsbanken Sans";
+      font-weight: 500;
+      font-style: normal;
+      src: local("Handelsbanken Sans Medium"),
+           local("HandelsbankenSans-Medium");
+    }
+
+    /* ── Keyframes ─────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0);    }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes arrowPulse {
+      0%, 100% { transform: scale(1);    opacity: 1;    }
+      50%       { transform: scale(1.08); opacity: 0.85; }
+    }
+
+    /* ── Banner shell ──────────────────────────────────── */
+    html, body {
+      width:  1080px;
+      height: 1920px;
+      overflow: hidden;
+    }
+
+    .banner {
+      position: relative;
+      width:  1080px;
+      height: 1920px;
+      background-color: #005AA0;   /* Handelsbanken brand blue */
+      color: #ffffff;
+      font-family: "Handelsbanken Sans", "Inter", "Helvetica Neue",
+                   Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 88px 96px;
+    }
+
+    /* ── Logo (top) ────────────────────────────────────── */
+    .logo-top {
+      font-size: 72px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      line-height: 1;
+      animation: fadeIn 0.6s ease both;
+    }
+
+    /* ── Content block ─────────────────────────────────── */
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+    }
+
+    .headline {
+      font-size: 120px;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      animation: fadeUp 0.7s ease 0.25s both;
+    }
+
+    .body-row {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      animation: fadeUp 0.7s ease 0.45s both;
+    }
+
+    .body-text {
+      font-size: 44px;
+      font-weight: 500;
+      line-height: 1.35;
+      letter-spacing: 0;
+      max-width: 720px;
+    }
+
+    /* ── Arrow icon ────────────────────────────────────── */
+    .arrow-circle {
+      flex-shrink: 0;
+      width:  112px;
+      height: 112px;
+      border: 5px solid rgba(255, 255, 255, 0.85);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: arrowPulse 2.4s ease-in-out 1.2s infinite;
+    }
+    .arrow-circle svg {
+      width:  52px;
+      height: 52px;
+      fill: none;
+      stroke: #ffffff;
+      stroke-width: 5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ── Logo (bottom) ─────────────────────────────────── */
+    .logo-bottom {
+      font-size: 72px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      line-height: 1;
+      animation: fadeIn 0.6s ease 0.1s both;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+
+    <!-- Logo top -->
+    <div class="logo-top">Handelsbanken</div>
+
+    <!-- Main content -->
+    <div class="content">
+      <h1 class="headline">
+        Hitta hem<br>
+        med personligt<br>
+        bolån
+      </h1>
+
+      <div class="body-row">
+        <p class="body-text">
+          Sök individuellt låneerbjudande<br>
+          i en bank nära dig
+        </p>
+
+        <!-- Arrow-in-circle icon (SVG) -->
+        <div class="arrow-circle" aria-hidden="true">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <line x1="10" y1="26" x2="42" y2="26"/>
+            <polyline points="28,12 42,26 28,40"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logo bottom -->
+    <div class="logo-bottom">Handelsbanken</div>
+
+  </div>
+</body>
+</html>
