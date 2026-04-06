@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "title": "Handelsbanken – Hemnet Bolån",
+  "description": "",
+  "width": 1080,
+  "height": 1920,
+  "events": {
+    "enabled": true,
+    "list": {}
+  },
+  "clicktags": {
+    "clickTag": "https://www.handelsbanken.se/sv/privat/bolan"
+  },
+  "source": "index.html"
+}
